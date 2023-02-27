@@ -48,9 +48,9 @@ selinux-policy-devel
 echo -e 'redhat\tALL=(ALL)\tNOPASSWD: ALL' > /etc/sudoers.d/redhat
 
 # Import Red Hat public keys to allow RPM GPG check (not necessary if a system is registered)
-if ! subscription-manager status >& /dev/null ; then
-   rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-*
-fi
+#if ! subscription-manager status >& /dev/null ; then
+#   rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-*
+#fi
 
 # Configure systemd journal service to persist logs between boots and limit their size to 1G
 mkdir -p /var/log/journal/
